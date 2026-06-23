@@ -1,0 +1,19 @@
+testbed:
+  name: csr1kv_lab
+
+devices:
+  CSR1kv:
+    os: iosxe
+    type: router
+
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.56.103
+        ssh_options: -o KexAlgorithms=diffie-hellman-group14-sha1
+
+    credentials:
+      default:
+        username: cisco
+        password: cisco123!
+
