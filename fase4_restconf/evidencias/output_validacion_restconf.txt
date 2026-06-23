@@ -1,0 +1,13 @@
+============================================================
+VALIDACION RESTCONF
+Alumno: Maikol Luis Mamani Segobia
+Codigo: 001V-09
+Fecha: 2026-06-23 01:11:15.426582
+============================================================
+[OK] Hostname
+[OK] Loopback
+[OK] WAN
+[OK] NTP
+
+Resultado: 4/4 OK
+CONFORME
