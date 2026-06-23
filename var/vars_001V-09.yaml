@@ -1,0 +1,20 @@
+---
+alumno_nombre: "Maikol Luis Mamani Segobia"
+codigo_alumno: "001V-09"
+
+empresa: "Centro Medico Andino SpA"
+
+router_ip: "192.168.56.103"
+router_user: "cisco"
+router_pass: "cisco123!"
+
+hostname_corporativo: "RTR-MEDAND"
+
+loopback_ip: "10.1.9.1"
+loopback_mask: "255.255.255.0"
+
+wan_description: "Enlace-WAN-Rancagua"
+
+banner_acceso: "ACCESO RESTRINGIDO - MEDAND"
+
+ntp_server: "1.1.1.1"
