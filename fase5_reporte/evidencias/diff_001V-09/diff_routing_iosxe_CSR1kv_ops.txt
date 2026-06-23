@@ -1,0 +1,26 @@
+--- ../fase1_baseline/evidencias/baseline_001V-09/routing_iosxe_CSR1kv_ops.txt
++++ evidencias/snapshot_final_001V-09/routing_iosxe_CSR1kv_ops.txt
+-info:
+- vrf:
+-  default:
+-   address_family:
+-    ipv4:
+-     routes:
+-      192.168.56.0/24:
+-       active: True
+-       next_hop:
+-        outgoing_interface:
+-         GigabitEthernet1:
+-          outgoing_interface: GigabitEthernet1
+-       route: 192.168.56.0/24
+-       source_protocol: connected
+-       source_protocol_codes: C
+-      192.168.56.103/32:
+-       active: True
+-       next_hop:
+-        outgoing_interface:
+-         GigabitEthernet1:
+-          outgoing_interface: GigabitEthernet1
+-       route: 192.168.56.103/32
+-       source_protocol: local
+-       source_protocol_codes: L

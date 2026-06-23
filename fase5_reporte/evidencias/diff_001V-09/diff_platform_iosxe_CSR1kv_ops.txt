@@ -1,0 +1,28 @@
+--- ../fase1_baseline/evidencias/baseline_001V-09/platform_iosxe_CSR1kv_ops.txt
++++ evidencias/snapshot_final_001V-09/platform_iosxe_CSR1kv_ops.txt
+-chassis: CSR1000V
+-config_register: 0x2102
+-dir: bootflash:/
+-issu_rollback_timer_reason: no ISSU operation is in progress
+-issu_rollback_timer_state: inactive
+-os: iosxe
+-redundancy_communication: False
+-redundancy_mode: Non-redundant
+-rtr_type: CSR1000V
+-slot:
+- oc:
+-  F0:
+-   name: CSR1000V
+-   sn:
+-   state: ok, active
+- rp:
+-  R0:
+-   config_register: 0x2102
+-   issu:
+-    in_progress: False
+-   name: CSR1000V
+-   redundancy_state: ACTIVE
+-   rp_uptime: 1 hour, 31 minutes
+-   sn: JAB1303001C
+-   state: ok, active
+-   system_image: Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)

@@ -1,0 +1,13 @@
+{
+  "_exclude": [
+    "updated"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "list_of_vrfs": [
+    ""
+  ],
+  "raw_data": false
+}

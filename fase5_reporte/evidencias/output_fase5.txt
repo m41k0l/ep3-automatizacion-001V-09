@@ -1,0 +1,2 @@
+Resultado: CONFORME
+Certificado generado: evidencias/certificado_compliance_001V-09.txt

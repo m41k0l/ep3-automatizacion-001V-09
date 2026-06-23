@@ -1,0 +1,10 @@
+==================================================
+CERTIFICADO DE COMPLIANCE
+==================================================
+Alumno: Maikol Luis Mamani Segobia
+Codigo: 001V-09
+Fecha: 2026-06-23 01:32:50.202610
+
+NETCONF: CONFORME
+RESTCONF: CONFORME
+COMPLIANCE: CONFORME

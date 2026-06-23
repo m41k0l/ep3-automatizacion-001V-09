@@ -1,0 +1,50 @@
+Issue while building the feature
+
+Traceback (most recent call last):
+  File "src/unicon/bases/connection.py", line 839, in unicon.bases.connection.Connection.connect
+  File "src/unicon/bases/routers/connection_provider.py", line 322, in unicon.bases.routers.connection_provider.BaseSingleRpConnectionProvider.connect
+  File "src/unicon/bases/routers/connection_provider.py", line 399, in unicon.bases.routers.connection_provider.BaseSingleRpConnectionProvider.init_connection
+  File "src/unicon/bases/routers/connection_provider.py", line 419, in unicon.bases.routers.connection_provider.BaseSingleRpConnectionProvider.init_handle
+  File "src/unicon/bases/routers/services.py", line 259, in unicon.bases.routers.services.BaseService.__call__
+  File "/home/maikol/ep3/fase1_baseline/venv/lib/python3.13/site-packages/unicon/plugins/iosxe/service_implementation.py", line 519, in call_service
+    dialog.process(spawn, timeout=timeout,
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+                   context=handle.context,
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+                   prompt_recovery=self.prompt_recovery)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src/unicon/eal/dialogs.py", line 479, in unicon.eal.dialogs.Dialog.process
+  File "src/unicon/eal/dialog_processor.py", line 358, in unicon.eal.dialog_processor.SimpleDialogProcessor.process
+  File "src/unicon/eal/dialog_processor.py", line 292, in unicon.eal.dialog_processor.SimpleDialogProcessor.timeout_handler
+unicon.core.errors.TimeoutError: Prompt timeout occured, please check the hostname
+                                 hostname: CSR1kv
+                                 timeout value: 10
+                                 last_command: 'enable\r'
+                                 pattern: ['^.*[Pp]assword( for )?(\\S+)?: ?$', '^.*?enable[\\r\\n]*.*?[Pp]assword( for )?(\\S+)?: ?$', '^.*?% (Bad passwords|Bad secrets|Access denied|Authentication failed|Login invalid).*?\\n', '^.*?(%\\w+(-\\S+)?-\\d+-\\w+|yang-infra:|PKI_SSL_IPC:|Guestshell destroyed successfully|%Error opening tftp:\\/\\/255\\.255\\.255\\.255|Autoinstall trying|audit: kauditd hold queue overflow|SECURITY WARNING|%RSA key|INSECURE DYNAMIC WARNING|key config-key password-encrypt|Failed to generate persistent self-signed certificate\\.|Secure server will use temporary self-signed certificate\\.|(LC|RP)/\\d+/\\d+/CPU\\d+:\\w+\\s+\\d+\\s+\\d{2}:\\d{2}:\\d{2}|\\[OK\\]).*\\s*$', '^.*--\\s?[Mm]ore\\s?--.*$', '^(.*?)(\\(unlicensed\\))?(wlc|WLC|eWLC|Router|RouterRP|Switch|ios|switch|CSR1kv)([a-zA-Z0-9-]*)(\\(recovery-mode\\))?(\\(rp-rec-mode\\))?(\\(standby\\))?(-stby)?(-standby)?(\\(boot\\))?#[\\s\\x07]*$']
+                                 buffer:'enable\r\nRTR-MEDAND#'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "src/genie/cli/commands/learn.py", line 365, in genie.cli.commands.learn.LearnCommand._retrieve_ops
+  File "/home/maikol/ep3/fase1_baseline/venv/lib/python3.13/site-packages/genie/libs/ops/routing/iosxe/routing.py", line 143, in learn
+    self.make(final_call=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/maikol/ep3/fase1_baseline/venv/lib/python3.13/site-packages/genie/ops/base/base.py", line 111, in make
+    self.maker.make(*args, **kwargs)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "src/genie/ops/base/maker.py", line 326, in genie.ops.base.maker.Maker.make
+  File "src/genie/ops/base/maker.py", line 440, in genie.ops.base.maker.Maker._call_parser
+  File "src/genie/metaparser/_metaparser.py", line 308, in genie.metaparser._metaparser.MetaParser.parse
+  File "/home/maikol/ep3/fase1_baseline/venv/lib/python3.13/site-packages/genie/libs/parser/iosxe/show_routing.py", line 44, in cli
+    out = self.device.execute(cmd, timeout=timeout)
+  File "src/unicon/bases/routers/services.py", line 258, in unicon.bases.routers.services.BaseService.__call__
+  File "src/unicon/bases/routers/services.py", line 165, in unicon.bases.routers.services.BaseService.pre_service
+  File "src/unicon/bases/connection.py", line 854, in unicon.bases.connection.Connection.connect
+unicon.core.errors.ConnectionError: failed to connect to CSR1kv
+Prompt timeout occured, please check the hostname
+                                 hostname: CSR1kv
+                                 timeout value: 10
+                                 last_command: 'enable\r'
+                                 pattern: ['^.*[Pp]assword( for )?(\\S+)?: ?$', '^.*?enable[\\r\\n]*.*?[Pp]assword( for )?(\\S+)?: ?$', '^.*?% (Bad passwords|Bad secrets|Access denied|Authentication failed|Login invalid).*?\\n', '^.*?(%\\w+(-\\S+)?-\\d+-\\w+|yang-infra:|PKI_SSL_IPC:|Guestshell destroyed successfully|%Error opening tftp:\\/\\/255\\.255\\.255\\.255|Autoinstall trying|audit: kauditd hold queue overflow|SECURITY WARNING|%RSA key|INSECURE DYNAMIC WARNING|key config-key password-encrypt|Failed to generate persistent self-signed certificate\\.|Secure server will use temporary self-signed certificate\\.|(LC|RP)/\\d+/\\d+/CPU\\d+:\\w+\\s+\\d+\\s+\\d{2}:\\d{2}:\\d{2}|\\[OK\\]).*\\s*$', '^.*--\\s?[Mm]ore\\s?--.*$', '^(.*?)(\\(unlicensed\\))?(wlc|WLC|eWLC|Router|RouterRP|Switch|ios|switch|CSR1kv)([a-zA-Z0-9-]*)(\\(recovery-mode\\))?(\\(rp-rec-mode\\))?(\\(standby\\))?(-stby)?(-standby)?(\\(boot\\))?#[\\s\\x07]*$']
+                                 buffer:'enable\r\nRTR-MEDAND#'

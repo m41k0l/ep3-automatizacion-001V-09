@@ -1,0 +1,37 @@
+
+2026-06-23 01:25:50,187: %UNICON-INFO: +++ CSR1kv logfile evidencias/snapshot_final_001V-09/connection_CSR1kv.txt +++
+
+2026-06-23 01:25:50,187: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+(cisco@192.168.56.103) Password: 
+
+2026-06-23 01:25:50,706: %UNICON-INFO: +++ connection to spawn: ssh -l cisco 192.168.56.103 -o KexAlgorithms=diffie-hellman-group14-sha1, id: 139686986126336 +++
+
+2026-06-23 01:25:50,707: %UNICON-ERROR: Use log_file() service for setting log file
+
+2026-06-23 01:25:50,708: %UNICON-INFO: connection to CSR1kv
+
+
+ACCESO RESTRINGIDO - MEDAND
+
+
+RTR-MEDAND#
+
+2026-06-23 01:25:50,769: %UNICON-INFO: +++ CSR1kv with via 'cli': enable +++
+enable
+RTR-MEDAND#
+
+2026-06-23 01:25:50,774: %UNICON-INFO: Storing credentials from default as current_credentials
+
+2026-06-23 01:25:50,775: %UNICON-WARNING: Invalid hostname detected: found RTR-MEDAND, expected CSR1kv
+
+RTR-MEDAND#
+
+2026-06-23 01:25:50,948: %UNICON-INFO: +++ CSR1kv with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+RTR-MEDAND#
+
+2026-06-23 01:25:51,125: %UNICON-INFO: +++ initializing handle +++
+
+2026-06-23 01:25:51,125: %UNICON-INFO: +++ CSR1kv with via 'cli': enable +++
+enable
+RTR-MEDAND#
