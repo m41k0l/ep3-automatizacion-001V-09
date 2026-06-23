@@ -1,0 +1,16 @@
+============================================================
+VALIDACION NETCONF
+Alumno: Maikol Luis Mamani Segobia
+Codigo: 001V-09
+Fecha: 2026-06-23 00:56:00.759915
+============================================================
+
+[OK] Conexion NETCONF establecida
+[OK] Hostname corporativo
+[OK] Loopback configurada
+[OK] Descripcion WAN
+[OK] Servidor NTP
+[OK] NETCONF habilitado
+
+Resultado: 5/5 OK
+CONFORME
