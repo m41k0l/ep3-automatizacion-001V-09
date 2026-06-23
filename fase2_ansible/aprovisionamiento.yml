@@ -1,0 +1,48 @@
+---
+- name: Configuracion corporativa CSR1kv
+  hosts: iosxe
+  gather_facts: no
+
+  vars_files:
+    - ../vars/vars_001V-09.yaml
+
+  tasks:
+
+    - name: Configurar hostname
+      ios_config:
+        lines:
+          - "hostname {{ hostname_corporativo }}"
+
+    - name: Configurar Loopback0
+      ios_config:
+        lines:
+          - ip address {{ loopback_ip }} {{ loopback_mask }}
+        parents: interface Loopback0
+
+    - name: Configurar descripcion WAN
+      ios_config:
+        lines:
+          - description {{ wan_description }}
+        parents: interface GigabitEthernet1
+
+    - name: Configurar banner
+      ios_config:
+        lines:
+          - banner motd ^C
+          - "{{ banner_acceso }}"
+          - ^C
+
+    - name: Configurar servidor NTP
+      ios_config:
+        lines:
+          - ntp server {{ ntp_server }}
+
+    - name: Habilitar NETCONF
+      ios_config:
+        lines:
+          - netconf-yang
+
+    - name: Habilitar RESTCONF
+      ios_config:
+        lines:
+          - restconf

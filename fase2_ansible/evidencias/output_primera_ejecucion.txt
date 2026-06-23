@@ -1,0 +1,27 @@
+
+PLAY [Configuracion corporativa CSR1kv] ****************************************
+
+TASK [Configurar hostname] *****************************************************
+changed: [CSR1kv]
+
+TASK [Configurar Loopback0] ****************************************************
+changed: [CSR1kv]
+
+TASK [Configurar descripcion WAN] **********************************************
+changed: [CSR1kv]
+
+TASK [Configurar banner] *******************************************************
+changed: [CSR1kv]
+
+TASK [Configurar servidor NTP] *************************************************
+changed: [CSR1kv]
+
+TASK [Habilitar NETCONF] *******************************************************
+ok: [CSR1kv]
+
+TASK [Habilitar RESTCONF] ******************************************************
+ok: [CSR1kv]
+
+PLAY RECAP *********************************************************************
+CSR1kv                     : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
